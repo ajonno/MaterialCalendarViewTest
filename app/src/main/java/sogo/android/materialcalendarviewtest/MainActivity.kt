@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity(), OnDateSelectedListener {
         var calendarView = findViewById<MaterialCalendarView>(R.id.calendarView)
         calendarView.state().edit()
                 .setFirstDayOfWeek(SATURDAY)
+                .setMinimumDate(CalendarDay.from(2017, 5, 17))
                 .commit()
 
         calendarView.selectionMode = 3 //= range  1 = single
